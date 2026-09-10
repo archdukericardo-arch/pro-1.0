@@ -7,7 +7,7 @@ var last_direction: Vector2 = Vector2.DOWN
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	process_movement()
 	move_and_slide()
 	
@@ -33,10 +33,10 @@ func process_animation(direction) -> void:
 
 func play_animation(prefix: String, dir: Vector2) -> void:
 	if dir.x > 0:
-		animated_sprite_2d.play(prefix + "+x")
+		animated_sprite_2d.play(prefix + " +x")
 	elif dir.x < 0:
 		animated_sprite_2d.play(prefix + "-x")
 	elif dir.y > 0:
 		animated_sprite_2d.play(prefix + "-y")
 	elif dir.y < 0:
-		animated_sprite_2d.play(prefix + "+y")
+		animated_sprite_2d.play(prefix + " +y")
