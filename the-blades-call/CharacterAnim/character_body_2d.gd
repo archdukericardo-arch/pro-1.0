@@ -33,10 +33,10 @@ func process_animation(direction) -> void:
 
 func play_animation(prefix: String, dir: Vector2) -> void:
 	if dir.x > 0:
-		animated_sprite_2d.play(prefix + " +x")
+		animated_sprite_2d.play(prefix + "_right")
 	elif dir.x < 0:
-		animated_sprite_2d.play(prefix + "-x")
+		animated_sprite_2d.play(prefix + "_left")
 	elif dir.y > 0:
-		animated_sprite_2d.play(prefix + "-y")
+		animated_sprite_2d.play(prefix + "_down")
 	elif dir.y < 0:
-		animated_sprite_2d.play(prefix + " +y")
+		animated_sprite_2d.play(prefix + "_up")
